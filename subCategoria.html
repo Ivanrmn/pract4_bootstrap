@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sub Categoría</title>
+<title>Home</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -12,11 +12,19 @@
 
 <style>
     li.nav-item {
-        margin-right: 35%;
+        margin-right: 22%;
     }
 
     .formularioBusqueda {
         margin-left: 40%;
+    }
+
+    .modal-content {
+        width: 225%;
+    }
+
+    td {
+        vertical-align: middle !important;
     }
 
     .filtro {
@@ -35,74 +43,143 @@
         margin-top: 40px;
         padding-left: 40%;
     }
-
 </style>
+<body class="font-italic" style="background-color: lightgray;">
+    <div class="container-fluid">
+    
+            <div class="row" style="height: 300px; background-color: gray; padding-top: 30px;">
+                
+                    <div class="col-4">
 
-<body class="font-italic" style="background-color: lightgray">
-        <div class="container-fluid">
-    
-                <div class="row" style="height: 300px; background-color: gray; padding-top: 30px;">
-                    
-                        <div class="col-4">
-    
+                    </div>
+
+                    <div class="row" style="text-align: center; padding-right: 20%;">
+                        <h1>TodoMecánica</h1>
+                    </div>
+
+                    <div class="col-1">
+                        <div>
+                            <button class="btn btn-primary" type="button" >
+                                <i style='font-size:24px' class='fas'>&#xf1ae;</i>
+                                <a href="login.html" style="text-decoration: none; color: white;">Login</a>
+                            </button>
                         </div>
-    
-                        <div class="row" style="text-align: center; padding-right: 20%;">
-                            <h1>TodoMecánica</h1>
-                        </div>
-    
-                        <div class="col-1">
-                            <div>
-                                <button class="btn btn-primary" type="button" >
-                                    <a href="login.html" style="text-decoration: none; color: white;">Login</a>
-                                </button>
-                            </div>
-                        </div>
-    
-                        <div class="col-1">
-                            <div >
-                                 
-                                <button class="btn btn-primary" type="button" >
-                                    <a href="shoppingCart.html" style="text-decoration: none; color: white;">Shopping Cart</a>
-                                </button>
-                            </div>
-                        </div>
-    
-                        <div class="col-2">
-                        </div>
-    
-                        <div class="col-2">
-                        </div>
-                        
-                        <div class="col-8">
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                                    <a class="nav-link" href="index.html">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                             <a class="nav-link" href="#">Coche</a>
-                                        </li>
-                                        <li class="nav-item">
-                                             <a class="nav-link" href="#">Moto</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="categoria.html">Aceites</a>
-                                        </li>
-                                    </ul>
-    
-                                    <form class="form-inline formularioBusqueda">
-                                        <input class="form-control mr-sm-2" type="text" /> 
-                                        <button class="btn btn-primary my-2 my-sm-0" type="submit">
-                                            Search
-                                        </button>
-                                    </form>
+                    </div>
+
+                    <div class="col-1">
+                        <div>
+                             
+                            <button class="btn btn-primary cesta" type="button" style="width:140%;">
+                                    <span class="glyphicon">&#xe116;</span>
+                                <a href="shoppingCart.html" style="text-decoration: none; color: white;">Shopping Cart</a>
+                                <span class="badge badge-light">4</span>
+                            </button>
+                            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm modal-left">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            
+                                                </button>
+                                                 <h4 class="modal-title" id="modal1Label">Cesta</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                    <table class="table">
+                                                            <thead>
+                                                              <tr>
+                                                                <th scope="col">Producto</th>
+                                                                <th scope="col">Descripción</th>
+                                                                <th scope="col">Cantidad</th>
+                                                                <th scope="col">Total</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td><img src="imagenes/bujia-ngk-generica.png" width="150px"></td>
+                                                                <td>Bujías NGK</td>
+                                                                <td>2</td>
+                                                                <td>16€</td>
+                                                              </tr>
+                                
+                                                              <tr>
+                                                                <td><img src="imagenes/aceite-repsol-moto-racing-4t-10w40-1l.jpg" width="150px"></td>
+                                                                <td>Aceite Repsol 10w40 4L</td>
+                                                                <td>1</td>
+                                                                <td>24€</td>
+                                                              </tr>
+                                
+                                                              <tr>
+                                                                    <td><img src="imagenes/carburador.PNG" width="150px"></td>
+                                                                    <td>Carburador GS500</td>
+                                                                    <td>1</td>
+                                                                    <td>189€</td>
+                                                                  </tr>
+                            
+                                                                      <tr>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td><strong>Total</strong></td>
+                                                                            <td>219€</td>
+                                                                          </tr>                            
+                                                                    </tbody>
+                                                          </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary"><a style="text-decoration: none; color: white;" href="shoppingCart.html">Ir a la cesta</a></button>
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </nav>
                         </div>
-                </div>
+                    </div>
+
+                    <div class="col-2">
+                    </div>
+
+                    <div class="col-2">
+                    </div>
+                    
+                    <div class="col-8">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                         <a class="nav-link" href="#">Coche</a>
+                                    </li>
+                                    <li class="nav-item">
+                                         <a class="nav-link" href="#">Moto</a>
+                                    </li>
+                                    <li class="nav-item">
+                                         <a class="nav-link" href="categoria.html">Aceites</a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="categoria.html" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                              Aceites
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              <a class="dropdown-item" href="subCategoria.html">5w30</a>
+                                              <a class="dropdown-item" href="#">5w40</a>
+                                            </div>
+                                          </li>
+                                </ul>
+
+                                <form class="form-inline formularioBusqueda">
+                                    <input class="form-control mr-sm-2" type="text" /> 
+                                    <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                                        Search
+                                    </button>
+                                </form>
+                            </div>
+                        </nav>
+                    </div>
             </div>
+        </div>
+
 
             <div class="row">
                     <div class="col-12" style="display: flex; margin-top: 50px;">
@@ -163,8 +240,8 @@
                 <div class="col-10">
             <h4>Castrol 5w30 5L</h4>
         </div>
-            <button class="btn btn-primary">Ver producto</button>
-        </div>
+        <button class="btn btn-primary"><a style="text-decoration: none; color: white;" href="producto.html">Ver producto</a></button>
+    </div>
 
         <div class="row">
         <div class="col-10">
@@ -195,8 +272,8 @@
                     <div class="col-10">
                 <h4>Motul 5w30 5L</h4>
             </div>
-                <button class="btn btn-primary">Ver producto</button>
-            </div>
+            <button class="btn btn-primary"><a style="text-decoration: none; color: white;" href="producto.html">Ver producto</a></button>
+        </div>
     
             <div class="row">
             <div class="col-10">
@@ -227,8 +304,8 @@
                         <div class="col-10">
                     <h4>Castrol 5w30 1L</h4>
                 </div>
-                    <button class="btn btn-primary">Ver producto</button>
-                </div>
+                <button class="btn btn-primary"><a style="text-decoration: none; color: white;" href="producto.html">Ver producto</a></button>
+            </div>
         
                 <div class="row">
                 <div class="col-10">
@@ -259,8 +336,8 @@
                             <div class="col-10">
                         <h4>Petronas 5w30 4L</h4>
                     </div>
-                        <button class="btn btn-primary">Ver producto</button>
-                    </div>
+                    <button class="btn btn-primary"><a style="text-decoration: none; color: white;" href="producto.html">Ver producto</a></button>
+                </div>
             
                     <div class="row">
                     <div class="col-10">
@@ -336,3 +413,12 @@
                 </div>
 </body>
 </html>
+
+<script>
+        $('.cesta').hover(function() {
+            $('#modal1').modal({
+                show: true,
+                backdrop: false
+            })
+        });
+    </script>
