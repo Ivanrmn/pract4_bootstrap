@@ -7,6 +7,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 </head>
 
 <style>
@@ -19,7 +20,7 @@
     }
 
     .filtro {
-        width: 50%;
+        width: 155%;
     }
 
     .container-producto {
@@ -110,7 +111,9 @@
                     <h2 style="margin-top: 20px;">Aceites 5w30</h2>
                 </div>
 
-                <div class="col-3" style="display: grid;">
+                <form>
+                        <div class="form-group" style="display: flex;">
+                <div class="col-4" style="display: grid; margin-right: 40%;">
                     <label for="sel1">Marca</label>
                     <select class="form-control filtro" id="sel1">
                         <option>Todas</option>
@@ -122,7 +125,7 @@
                     </select>
                 </div>
 
-                <div class="col-3" style="display: grid">
+                <div class="col-4" style="display: grid; margin-right: 40%;">
                     <label for="sel1">Litros</label>
                     <select class="form-control filtro" id="sel1">
                         <option>1L</option>
@@ -131,7 +134,7 @@
                     </select>
                 </div>
 
-                <div class="col-3" style="display: grid">
+                <div class="col-4" style="display: grid; margin-right: 40%;">
                         <div style="display: grid">
                                 <label for="sel1">Ordenar por</label>
                                 <select class="form-control filtro" id="sel1">
@@ -142,6 +145,8 @@
                             </div>
                 </div>
 
+            </div>
+                </form>
                 </div>
 </div>
 
