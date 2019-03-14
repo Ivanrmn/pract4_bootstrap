@@ -11,19 +11,19 @@
 
 <style>
     li.nav-item {
-        margin-right: 35%;
+        margin-right: 22%;
     }
 
     .formularioBusqueda {
         margin-left: 40%;
     }
 </style>
-<body style="background-color: lightgray">
+<body class="font-italic" style="background-color: lightgray;">
     <div class="container-fluid">
     
             <div class="row" style="height: 300px; background-color: gray; padding-top: 30px;">
                 
-                    <div class="col-md-4">
+                    <div class="col-4">
 
                     </div>
 
@@ -31,7 +31,7 @@
                         <h1>TodoMecánica</h1>
                     </div>
 
-                    <div class="col-md-1">
+                    <div class="col-1">
                         <div>
                             <button class="btn btn-primary" type="button" >
                                 <a href="login.html" style="text-decoration: none; color: white;">Login</a>
@@ -39,22 +39,23 @@
                         </div>
                     </div>
 
-                    <div class="col-md-1">
-                        <div >
+                    <div class="col-1">
+                        <div>
                              
-                            <button class="btn btn-primary" type="button" >
+                            <button class="btn btn-primary" type="button" style="width:140%;">
                                 <a href="shoppingCart.html" style="text-decoration: none; color: white;">Shopping Cart</a>
+                                <span class="badge badge-light">4</span>
                             </button>
                         </div>
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-2">
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-2">
                     </div>
                     
-                    <div class="col-md-8 col-sm-8">
+                    <div class="col-8">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="navbar-nav">
@@ -68,8 +69,18 @@
                                          <a class="nav-link" href="#">Moto</a>
                                     </li>
                                     <li class="nav-item">
-                                         <a class="nav-link" href="producto.html">Aceites</a>
+                                         <a class="nav-link" href="categoria.html">Aceites</a>
                                     </li>
+
+                                    <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="categoria.html" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                              Aceites
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              <a class="dropdown-item" href="subCategoria.html">5w30</a>
+                                              <a class="dropdown-item" href="#">5w40</a>
+                                            </div>
+                                          </li>
                                 </ul>
 
                                 <form class="form-inline formularioBusqueda">
@@ -85,37 +96,37 @@
         </div>
 
         <div class="row" style="margin-top: 20px;">
-            <div class="col-md-8 col-sm-8" style="margin-left: 10%;">
-                <div class="col-md-12 col-sm-12">
+            <div class="col-8" style="margin-left: 10%;">
+                <div class="col-12">
                     <h2>Novedades</h2>
                 </div>
 
-                <div class="col-md-12 col-sm-12" style="display: flex;">
-                    <div class="col-md-4">
+                <div class="col-12" style="display: flex;">
+                    <div class="col-4">
                         <img src="imagenes/Bilstein-B14.jpg" height="160" width="200">
                         <p>Amortiguadores</p>
                     </div>
 
-                <div class="col-md-4">
+                <div class="col-4">
                     <img src="imagenes/filtro2-2ztkf9vxysgaaqwzjkd98g.jpg" height="150" width="270">
                     <p>Filtros</p>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-4">
                     <img src="imagenes/Supresor_catalizador.jpg" height="160" width="200">
                     <p>Supresor catalizador</p>
                 </div>
         </div>
         </div>
 
-        <div class="col-md-2 col-sm-2" style="margin-left: 6%;">
+        <div class="col-2" style="margin-left: 6%;">
             <img src="imagenes/descarga.png" height="450px" width="100%">
             <img src="imagenes/descarga.png" height="450px" width="100%">
         </div>
     </div>
 
 
-    <div class="col-md-8 col-sm-8" style="margin-top: -550px;">
+    <div class="col-8" style="margin-top: -550px;">
             <table class="table table-dark" style="width: 65%; margin-left: 20%; margin-top: -60px;">
                     <thead>
                       <tr>
@@ -139,8 +150,8 @@
                   </table>
     </div>
 
-    <div class="col-md-8 col-sm-8" style="display: flex; padding-top: 80px;">
-        <div class="col-md-4 col-sm-4" style="margin-left: 20%;">
+    <div class="col-8" style="display: flex; padding-top: 80px;">
+        <div class="col-4" style="margin-left: 20%;">
             <h4>Ven a conocernos!</h4>
                 <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 500px">
                         <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
@@ -148,7 +159,7 @@
                       </div>
         </div>
 
-        <div class="col-md-4 col-sm-4">
+        <div class="col-4">
             <span>Suscríbete a nuestra tienda!</span>
 
             <input class="form-control mr-sm-2" placeholder="Nombre" type="text" style="margin-top:20px; margin-bottom: 20px;"/>
@@ -161,20 +172,20 @@
         </div>
     </div>
 
-    <div class="col-md-12 col-sm-12" style="background-color: gray; height: 200px; display: flex;">
-        <div class="col-md-4 col-sm-4" style="display: grid; padding-top: 40px; padding-left: 10%;">
+    <div class="col-12" style="background-color: gray; height: 200px; display: flex;">
+        <div class="col-4" style="display: grid; padding-top: 40px; padding-left: 10%;">
             <h3>Contacto</h3>
             <span>Calle ejemplo nº20</span>
             <span>Número: 9328324</span>
         </div>
 
-        <div class="col-md-4 col-sm-4" style="display: grid; padding-top: 40px; padding-left: 10%;">
+        <div class="col-4" style="display: grid; padding-top: 40px; padding-left: 10%;">
             <a href="">Quienes somos</a>
             <a href="">Política de cookies</a>
             <a href="">Política de privacidad</a>
         </div>
 
-        <div class="col-md-4 col-sm-4">
+        <div class="col-4">
             <img src="imagenes/redes-sociales.png" width="70%">
         </div>
     </div>
