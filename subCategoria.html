@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cesta</title>
+<title>Sub Categoría</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,9 +18,17 @@
         margin-left: 40%;
     }
 
-    td {
-        vertical-align: middle !important;
+    .filtro {
+        width: 50%;
     }
+
+    .container-producto {
+        border: 1px solid black;
+        height: auto;
+        padding: 30px;
+        margin-top: 30px;
+    }
+
 </style>
 
 <body style="background-color: lightgray">
@@ -88,73 +96,123 @@
                         </div>
                 </div>
             </div>
-            
-            <div class="col-10" style="margin-top: 50px; margin-bottom: 50px; margin-left: 8%;">
-                    <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">Producto</th>
-                                <th scope="col">Descripción</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col"></th>
-                                <th scope="col">Total</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td><img src="imagenes/bujia-ngk-generica.png" width="150px"></td>
-                                <td>Bujías NGK</td>
-                                <td>8€</td>
-                                <td><input type="text" name="" value="2"></td>
-                                <td><img src="imagenes/basura.png" width="20px;"></td>
-                                <td>16€</td>
-                              </tr>
 
-                              <tr>
-                                <td><img src="imagenes/aceite-repsol-moto-racing-4t-10w40-1l.jpg" width="150px"></td>
-                                <td>Aceite Repsol 10w40 4L</td>
-                                <td>24€</td>
-                                <td><input type="text" name="" value="1"></td>
-                                <td><img src="imagenes/basura.png" width="20px;"></td>
-                                <td>24€</td>
-                              </tr>
 
-                              <tr>
-                                    <td><img src="imagenes/carburador.PNG" width="150px"></td>
-                                    <td>Carburador GS500</td>
-                                    <td>189€</td>
-                                    <td><input type="text" name="" value="1"></td>
-                                    <td><img src="imagenes/basura.png" width="20px;"></td>
-                                    <td>189€</td>
-                                  </tr>
 
-                                  <tr>
-                                        <td><strong>Código descuento</strong></td>
-                                        <td><input type="text" name="" placeholder="Introduce tu código" value=""></td>
-                                        <td> <button class="btn btn-warning" type="button">Aplicar</button>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>-10€</td>
-                                      </tr>
-                                      <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td><strong>Total</strong></td>
-                                            <td>219€</td>
-                                          </tr>                            
-                                    </tbody>
-                          </table>
+            <div class="row">
+                    <div class="col-12" style="display: flex; margin-top: 50px;">
 
-                          <div class="col-10" style="margin-left: 14%;">
-                          <button class="btn btn-danger" type="button" style="float: right; width: 200px; margin-bottom: 50px;">Pagar
-                            </button>
-                        </div>
+                <div class="col-3" style="padding-left: 9%;">
+                    <h2 style="margin-top: 20px;">Aceites 5w30</h2>
+                </div>
+
+                <div class="col-3" style="display: grid;">
+                    <label for="sel1">Marca</label>
+                    <select class="form-control filtro" id="sel1">
+                        <option>Todas</option>
+                        <option>Motul</option>
+                        <option>Castrol</option>
+                        <option>Repsol</option>
+                        <option>Petronas</option>
+                        <option>Mobil</option>
+                    </select>
+                </div>
+
+                <div class="col-3" style="display: grid">
+                    <label for="sel1">Litros</label>
+                    <select class="form-control filtro" id="sel1">
+                        <option>1L</option>
+                        <option>4L</option>
+                        <option>5L</option>
+                    </select>
+                </div>
+
+                <div class="col-3" style="display: grid">
+                        <div style="display: grid">
+                                <label for="sel1">Ordenar por</label>
+                                <select class="form-control filtro" id="sel1">
+                                    <option>Precio más bajo</option>
+                                    <option>Precio más alto</option>
+                                    <option>Más populares</option>
+                                </select>                
+                            </div>
+                </div>
+
+                </div>
+
+</div>
+
+
+
+<div class="col-12">
+
+    <div class="row">
+        <div class="col-3">
+            <img src="">
+        </div>
+
+        <div class="col-8 container-producto">
+            <div class="row">
+                <div class="col-10">
+            <h4>Castrol 5w30 5L</h4>
+        </div>
+            <button class="btn btn-primary">Ver producto</button>
+        </div>
+
+        <div class="row">
+        <div class="col-10">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+                remaining essentially unchanged. It was popularised in the 1960s</p>
             </div>
 
+            <div class="col-2" style="display: flex; padding-left: 8%; margin-top: 36px;">
+            <span style="margin-right: 20%;">34€</span>
+            <img src="imagenes/carrito.png" width="20px" height="20px">
+        </div>
+
+        </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="col-12 d-flex justify-content-center h-100" style="margin-top: 40px;">
+        <nav>
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#">Primero</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Anterior</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" style="color:darkblue; font-weight: bold;">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">5</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Último</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+            
             <div class="col-md-12 col-sm-12" style="background-color: gray; height: 200px; display: flex;">
                     <div class="col-md-4 col-sm-4" style="display: grid; padding-top: 40px; padding-left: 10%;">
                         <h3>Contacto</h3>
